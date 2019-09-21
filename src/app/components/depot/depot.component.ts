@@ -26,5 +26,8 @@ export class DepotComponent implements OnInit {
   }
    isCaissier() {
     this.isCaissier();
+   }
+    getLogin() {
+  return(localStorage.getItem('username'));
   }
 }

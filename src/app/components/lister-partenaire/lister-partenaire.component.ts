@@ -3,7 +3,6 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ListerPartenaireService } from 'src/app/services/lister-partenaire.service';
-import { AjouterPartenaireService } from 'src/app/services/ajouter-partenaire.service';
 
 
 export interface UserData {
@@ -59,6 +58,10 @@ displayedColumns: string[] = ['id', 'prenom', 'nom', 'adresse', 'email', 'teleph
 
  isCaissier() {
     this.isCaissier();
+  }
+
+    getLogin() {
+  return(localStorage.getItem('username'));
   }
 
 }

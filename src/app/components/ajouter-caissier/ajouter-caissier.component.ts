@@ -53,6 +53,10 @@ imageUrl: string = "/assets/Images/user.png";
   }  
    isCaissier() {
     this.isCaissier();
+   }
+  
+    getLogin() {
+  return(localStorage.getItem('username'));
   }
 
 }

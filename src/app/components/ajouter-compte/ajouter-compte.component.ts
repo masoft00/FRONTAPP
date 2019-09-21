@@ -29,5 +29,8 @@ export class AjouterCompteComponent implements OnInit {
 }
  isCaissier() {
     this.isCaissier();
+ }
+    getLogin() {
+  return(localStorage.getItem('username'));
   }
 }

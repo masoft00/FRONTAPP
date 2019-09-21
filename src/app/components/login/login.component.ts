@@ -38,4 +38,8 @@ constructor(private LogService:LoginService, private router:Router) { }
       
       });
   }
+
+    getLogin() {
+  return(localStorage.getItem('username'));
+  }
 }

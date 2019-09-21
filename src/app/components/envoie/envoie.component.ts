@@ -37,4 +37,8 @@ export class EnvoieComponent implements OnInit {
    isCaissier() {
     this.isCaissier();
   }
+
+    getLogin() {
+  return(localStorage.getItem('username'));
+  }
 }
