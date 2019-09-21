@@ -1,0 +1,140 @@
+<body class="hold-transition sidebar-mini layout-fixed">
+  <section class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" routerLink="/connexion">
+            <i class="fas fa-sign-out-alt">Deconnexion</i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <!-- <img src="assets/dist/img/monlogo.png" class="img-circle elevation-2" alt="User Image"> -->
+
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">XALISS TRANSFERT</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <app-nav></app-nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+    <section class="content-wrapper">
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">AJOUTER UN UTILISATEUR</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form #imageForm=ngForm (ngSubmit)="OnSubmit(username,prenom,nom,image,adresse,email,telephone,password)">
+        <section class="content">
+          <section class="container-fluid">
+            <section class="row">
+              <section class="col-lg-12 connectedSortable">
+                <div class="card-body">
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Prénom</label>
+                        <div class="col-sm-10">
+                          <input type="text" #prenom name="prenom" ngModel class="form-control" id="inputEmail3"
+                            placeholder="Prénom">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="nom" #nom ngModel class="form-control" id="inputEmail3"
+                            placeholder="Nom">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Adresse</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="adresse" ngModel class="form-control" id="inputEmail3"
+                            placeholder="Adresse" #adresse>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" name="email" ngModel class="form-control" id="inputEmail3"
+                            placeholder="Email" #email>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Téléphone</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="telephone" ngModel class="form-control" id="inputEmail3"
+                            placeholder="Téléphone" #telephone>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="username" ngModel class="form-control" id="inputEmail3"
+                            placeholder="username" #username>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                          <input type="password" name="password" ngModel class="form-control" id="inputEmail3"
+                            placeholder="Mot de passe" #password>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Photo</label>
+                        <div class="col-sm-10">
+                          <input type="file" name="photo" ngModel #image accept="image/*"
+                            (change)="handleFileInput($event.target.files)" required class="form-control"
+                            id="inputEmail3" #photo>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </section>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </section>
+        </section>
+      </form>
+    </section>
+
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2019 <a href="http://adminlte.io">MAKARIMAL AKHLAQ SOFT</a>.</strong>
+
+    </footer>
+  </section>
+
+</body>

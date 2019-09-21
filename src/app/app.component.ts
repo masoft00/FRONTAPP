@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FRONTAPP';
+  LoginService: any;
+  
+isCaissier() {
+    this.isCaissier();
+  }
+ 
 }

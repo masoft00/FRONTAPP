@@ -1,0 +1,36 @@
+<div class="login-box">
+  <div class="login-logo">
+    <b>AUTHENTIFICATION</b>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Veuillez entrer vos identifiants</p>
+      <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Login ou Email" ngModel name="username">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password" name="password" ngModel>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="onLogin()">Connexion</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>

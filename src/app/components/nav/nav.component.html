@@ -1,0 +1,84 @@
+<nav class="mt-2">
+  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <li class="nav-item">
+      <a routerLink="/menu" class="nav-link">
+        <i class="nav-icon  fas fa-home"></i>
+        <p>
+          Accueil
+        </p>
+      </a>
+    </li>
+    <li class="nav-item has-treeview menu-open">
+      <a href="#" class="nav-link active">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+          Partenaire
+          <i class="right fas fa-angle-left"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a routerLink="/ajouter_partenaire" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Ajouter un Partenaire</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/lister_partenaire" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Liste Utilisateurs</p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item" *ngIf="isCaissier(LoginService)">
+      <a routerLink="/ajouter_caissier" class="nav-link">
+        <i class="nav-icon far fa-user"></i>
+        <p>
+          Ajouter un Caissier
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/ajouter_utilisateur" class="nav-link">
+        <i class="nav-icon far fa-user"></i>
+        <p>
+          Ajouter un Utilisateur
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/ajouter_compte" class="nav-link">
+        <i class="nav-icon fas fa-expand"></i>
+        <p>
+          Ajouter un Compte
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/depot" class="nav-link">
+        <i class="nav-icon fas fa-arrow-circle-right"></i>
+        <p>
+          Depot
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/envoie" class="nav-link">
+        <i class=" nav-icon fas fa-arrow-circle-right"></i>
+        <p>
+          Envoie
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/retrait" class="nav-link">
+        <i class="nav-icon fas fa-arrow-alt-circle-left"></i>
+        <p>
+          Retrait
+        </p>
+      </a>
+    </li>
+
+  </ul>
+</nav>
