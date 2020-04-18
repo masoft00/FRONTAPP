@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AjouterPartenaireService } from 'src/app/services/ajouter-partenaire.service';
 import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-ajouter-partenaire',
   templateUrl: './ajouter-partenaire.component.html',
@@ -76,6 +77,12 @@ imageUrl: string = "/assets/Images/user.png";
   
     getLogin() {
   return(localStorage.getItem('username'));
-  }
+    }
+  
+   Ajouter() {
+     Swal.fire(
+       "Partenaire ajouté avec success !",
+    )
+   }
 
 }

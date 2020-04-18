@@ -11,7 +11,6 @@ constructor(private http : HttpClient) { }
   postFile(
     partenaire      : string,
     ) {
-      
     const Headers  = {headers: new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem('token'))};
     const endpoint = 'http://localhost:8000/api/ajouter/compte';
     const formData : FormData= new FormData();

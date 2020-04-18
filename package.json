@@ -28,6 +28,7 @@
     "sweetalert": "^2.1.2",
     "sweetalert2": "^8.17.1",
     "tslib": "^1.9.0",
+    "webpack": "^4.41.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

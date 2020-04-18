@@ -18,7 +18,6 @@ constructor(private http: HttpClient) { }
     formData.append('code',code);
     formData.append('numpieceben',numpieceben);
     formData.append('typepieceben',typepieceben);
-    return this.http
-      .post(endpoint, formData,Headers);
+    return this.http.post(endpoint, formData,Headers);
   }
 }

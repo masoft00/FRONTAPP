@@ -42,8 +42,6 @@ import { NavComponent } from './components/nav/nav.component';
     FormsModule,
     HttpClientModule,
     MaterialModule,
- 
-  
   ],
   providers: [],
   bootstrap: [AppComponent]

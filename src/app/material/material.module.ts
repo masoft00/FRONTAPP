@@ -38,7 +38,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 // FIN DES IMPORTAION POUR ANGULAR MATERIAL
 
-const MaterialComponents=[
+const material=[
   MatAutocompleteModule,
   MatCheckboxModule,
   MatDatepickerModule,
@@ -79,7 +79,7 @@ const MaterialComponents=[
 
 @NgModule({
   declarations: [],
-  imports: [MaterialComponents],
-  exports:[MaterialComponents]
+  imports: [material],
+  exports:[material]
 })
 export class MaterialModule { }

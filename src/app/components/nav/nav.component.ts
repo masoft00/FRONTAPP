@@ -10,7 +10,7 @@ export class NavComponent implements OnInit {
   LoginService: any;
 
 
-  constructor(private logservice:LoginService) { }
+  constructor(private logservice: LoginService) { }
 
   ngOnInit() {
 
@@ -23,15 +23,12 @@ export class NavComponent implements OnInit {
   isAdminSup() {
     this.logservice.isAdminSup();
   }
-  
   isAdminPartenaire()  {
     this.logservice.isAdminPartenaire();
   }
-  
    isUserPartenaire() {
     this.logservice.isUserPartenaire();
    }
-  
    Authentification() {
     this.logservice.Authentification();
    }

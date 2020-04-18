@@ -1,8 +1,8 @@
 <body class="hold-transition sidebar-mini layout-fixed">
   <section class="wrapper">
-    <!-- Navbar -->
+    <!--Navbar-->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Left navbar links -->
+      <!--Left navbar links-->
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
@@ -17,23 +17,19 @@
       </ul>
     </nav>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
-
-      <!-- Sidebar -->
+      <!--Sidebar-->
       <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <!-- <img src="assets/dist/img/monlogo.png" class="img-circle elevation-2" alt="User Image"> -->
-
+            <!--<img src="assets/dist/img/monlogo.png" class="img-circle elevation-2" alt="User Image">-->
           </div>
           <div class="info">
             <a href="#" class="d-block">XALISS TRANSFERT</a>
             <h4 class="d-block">{{getLogin()}}</h4>
           </div>
         </div>
-
-        <!-- Sidebar Menu -->
+        <!--Sidebar Menu-->
         <app-nav></app-nav>
         <!-- /.sidebar-menu -->
       </div>
@@ -56,7 +52,6 @@
               <section class="col-lg-12 connectedSortable">
                 <div class="card-body">
                   <div class="row">
-
                     <div class="col-md-6">
                       <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-2 control-label">Prénom</label>
@@ -86,7 +81,6 @@
                             placeholder="Email" #email>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-md-6">
                       <div class="form-group row">
@@ -123,9 +117,8 @@
                   </div>
                 </div>
               </section>
-
             </section>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" (click)="Ajouter()">Ajouter</button>
           </section>
         </section>
       </form>
@@ -133,8 +126,6 @@
 
     <footer class="main-footer">
       <strong>Copyright &copy; 2019 <a href="http://adminlte.io">MAKARIMAL AKHLAQ SOFT</a>.</strong>
-
     </footer>
   </section>
-
 </body>

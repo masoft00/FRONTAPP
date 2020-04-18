@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { AjouterCaissierService } from 'src/app/services/ajouter-caissier.service';
 
 @Component({
@@ -28,7 +29,7 @@ imageUrl: string = "/assets/Images/user.png";
   }
 
    OnSubmit(username,prenom,nom,image,adresse,email,telephone,password){
-   this.ajoutCaissierService .postFile(
+   this.ajoutCaissierService.postFile(
      username.value,
      prenom.value,
      nom.value,
@@ -57,6 +58,12 @@ imageUrl: string = "/assets/Images/user.png";
   
     getLogin() {
   return(localStorage.getItem('username'));
-  }
+    }
+  
+   Ajouter() {
+     Swal.fire(
+       "Caissier ajouté avec success !",
+    )
+   }
 
 }

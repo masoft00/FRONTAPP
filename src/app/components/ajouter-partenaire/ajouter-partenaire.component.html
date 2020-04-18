@@ -48,8 +48,7 @@
           </div>
         </div>
       </div>
-      <form #imageForm=ngForm
-        (ngSubmit)="OnSubmit(username,prenom,nom,image,adresse,email,telephone,raisonSociale,ninea,password)">
+      <form #imageForm=ngForm (ngSubmit)="OnSubmit(username,prenom,nom,image,adresse,email,telephone,raisonSociale,ninea,password)">
         <section class="content">
           <section class="container-fluid">
             <section class="row">
@@ -138,7 +137,7 @@
               </section>
 
             </section>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" (click)="Ajouter()">Ajouter</button>
           </section>
         </section>
       </form>

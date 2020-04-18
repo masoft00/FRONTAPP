@@ -51,7 +51,7 @@ imageUrl: string = "/assets/Images/user.png";
   
   AjouterPartenaire() {
       Swal.fire(
-      "Vous venez d'ajouter un nouveau d'utilisateur !",
+      "Nouveau utilisateur ajouté !",
       'Ok'
     )
   }

@@ -2,30 +2,25 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 host1 = 'http://127.0.0.1:8000/api/login_check';
+ // host1 = 'http://127.0.0.1:8080/authenticate';
   jwt: string;
   username: string;
   roles: Array <string>;
-  
-
   constructor(private http: HttpClient) { }
   login(data) {
-    return this.http.post<any>(this.host1,data,{observe:'response'});
+    return this.http.post<any>(this.host1, data, {observe: 'response'});
   }
-    //CETTE METHODE ME PERTMET DE SAUVEGARGER LE TOKEN AU NIVEAU DE LOCAL STORAGE
+    // CETTE METHODE ME PERTMET DE SAUVEGARGER LE TOKEN AU NIVEAU DE LOCAL STORAGE
   saveJwtToken(jwt: string) {
-   
     localStorage.setItem('token', jwt);
     this.parsejwt(jwt);
-       
     }
-  
-    //CETTE METHODE ME PERTMET DE DECODER LE TOKEN
+    // CETTE METHODE ME PERTMET DE DECODER LE TOKEN
   parsejwt(token: any) {
     let jwtHelper = new JwtHelperService();
     let objJWT    = jwtHelper.decodeToken(token);
@@ -35,34 +30,36 @@ host1 = 'http://127.0.0.1:8000/api/login_check';
     localStorage.setItem('username', this.username);
     localStorage.setItem('roles', this.roles[0]);
   }
-   
 
-  //CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN ADMIN SUPERIEUR
+  // CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN ADMIN SUPERIEUR
   isAdminSup() {
-    return this.roles.indexOf('ROLE_ADMIN_SUP')>=0;
+    // return this.roles.indexOf('ROLE_ADMIN_SUP') >= 0;
+    return localStorage.getItem('roles').indexOf('ROLE_ADMIN_SUP') >= 0;
   }
 
-  //CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN CAISSIER
+  // CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN CAISSIER
   isCaissier() {
    // return this.roles.indexOf('ROLE_CAISSIER') >=0;
-   return localStorage.getItem('roles').indexOf('ROLE_CAISSIER') >=0;
+   return localStorage.getItem('roles').indexOf('ROLE_CAISSIER') >= 0;
   }
 
-  //CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN ADMI PARTENAIRE
+  // CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN ADMI PARTENAIRE
   isAdminPartenaire() {
-    return this.roles.indexOf('ROLE_ADMIN_PARTENAIRE') >=0;
+    return this.roles.indexOf('ROLE_ADMIN_PARTENAIRE') >= 0;
   }
 
-  //CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN USER PARTENAIRE
+  // CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR EST UN USER PARTENAIRE
   isUserPartenaire() {
-    return this.roles.indexOf('ROLE_USER_PARTENAIRE') >=0;
+    return this.roles.indexOf('ROLE_USER_PARTENAIRE') >= 0;
   }
 
-  //CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR S'EST CONNECTE
+  // CETTE METHODE ME PERTMET DE VERIFIER SI L'UTILISATEUR S'EST CONNECTE
+  // pour l'instant elle sera decommenté
   Authentification() {
-    return this.roles && (this.isAdminSup ||this.isAdminPartenaire ||this.isCaissier || this.isUserPartenaire);
-  }
+  return this.roles && (this.isAdminSup || this.isAdminPartenaire || this.isCaissier || this.isUserPartenaire);
+ }
 
 
 
 }
+

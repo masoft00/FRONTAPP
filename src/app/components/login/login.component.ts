@@ -8,8 +8,7 @@ import Swal  from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-constructor(private LogService:LoginService, private router:Router) { }
-
+  constructor(private LogService:LoginService, private router:Router) { }
   ngOnInit() {
   }
   //Cette methode me permet de se connecter vers mon API
@@ -20,7 +19,8 @@ constructor(private LogService:LoginService, private router:Router) { }
         const jwt = resp.body.token;
         console.log(jwt);
         this.LogService.saveJwtToken(jwt);
-        //ce bout de code me permet de faire une redirection
+
+        //ce_bout_de_code_me_permet_de_faire_une_redirection
         this.router.navigateByUrl('/menu');
 
         const Toast = Swal.mixin({
@@ -28,14 +28,12 @@ constructor(private LogService:LoginService, private router:Router) { }
           position         : 'top-end',
           showConfirmButton: false,
           timer            : 3000
-        })
+        });
         Toast.fire({
           type : 'success'               ,
           title: 'Signed in successfully'
-        })
-      
+        });
       }, err => {
-      
       });
   }
 

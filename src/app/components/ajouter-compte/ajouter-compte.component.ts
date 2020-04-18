@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { AjouterCompteService } from 'src/app/services/ajouter-compte.service';
 
 @Component({
@@ -32,5 +33,10 @@ export class AjouterCompteComponent implements OnInit {
  }
     getLogin() {
   return(localStorage.getItem('username'));
-  }
+    }
+   Envoyer() {
+     Swal.fire(
+       "Compte ajouté avec success !",
+    )
+   }
 }

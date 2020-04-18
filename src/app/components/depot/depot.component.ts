@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DepotService } from '../../services/depot.service';
 
-
 @Component({
   selector: 'app-depot',
   templateUrl: './depot.component.html',
