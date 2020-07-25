@@ -23,7 +23,7 @@ export interface UserData {
   styleUrls: ['./lister-partenaire.component.css']
 })
 export class ListerPartenaireComponent implements OnInit {
-displayedColumns: string[] = ['id', 'prenom', 'nom', 'adresse', 'email', 'telephone', 'roles','statut'];
+  displayedColumns: string[] = ['id', 'prenom', 'nom', 'adresse', 'email', 'telephone', 'roles','statut'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
